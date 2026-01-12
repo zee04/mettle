@@ -381,7 +381,8 @@ const frameworkStages = [
                                   <ArrowRight className="text-white w-6 h-6" />
                               </div>
                               {/* The actual text description popout */}
-                              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
+                              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
+
                                   <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">{service.title}</h4>
                                   <p className="text-[10px] leading-tight text-neutral-500">{service.desc}</p>
                               </div>
@@ -447,9 +448,8 @@ const frameworkStages = [
 
                 
                  
-                 <div className="flex gap-6 pt-6 border-t border-black/5">
-                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-neutral-300 overflow-hidden shadow-xl">
-
+                 <div className="flex flex-col md:flex-row gap-6 pt-6 border-t border-black/5">
+                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-neutral-300 overflow-hidden shadow-xl mx-auto md:mx-0">
                        <img src="/images/vidit1.png" alt="Founder" className="w-full h-full object-cover" />
                     </div>
                     <div>
@@ -683,6 +683,19 @@ const frameworkStages = [
         .animate-marquee { animation: marquee 18s linear infinite; }
         .animate-spin-slow { animation: spin 22s linear infinite; }
         .animate-reverse-spin { animation: reverse-spin 22s linear infinite; }
+		
+		@media (max-width: 768px) {
+         .animate-marquee {
+              animation: marquee 9s linear infinite;
+                       }
+          .animate-spin-slow {
+           animation-duration: 12s;
+            }
+            .animate-reverse-spin {
+           animation-duration: 12s;
+             }
+                       }
+
         .hover\\:pause-spin:hover { animation-play-state: paused; }
         .hover\\:pause-spin:hover .animate-reverse-spin { animation-play-state: paused; }
         
