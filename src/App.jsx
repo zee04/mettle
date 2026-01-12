@@ -40,28 +40,35 @@ const App = () => {
       headline: "Systems Before Service.",
       byline: "Based in Mumbai, Mettle designs the operational architecture that allows boutique concepts to scale and generate predictable returns nationwide and globally.",
       image: "/images/sealinknight.webp",
-      cta: "Explore Method"
+      cta: "Explore Method",
+	  link: "#framework",
     },
+	
     {
       id: 2,
       headline: "₹12Cr → ₹34Cr Revenue.",
       byline: "Proven velocity through systemic design and operational audits.",
       image: "/images/stair.webp",
-      cta: "See Our Projects"
+      cta: "Our Projects",
+	  link: "#works",
     },
+	
     {
       id: 3,
-      headline: "From blank space to first service<",
+      headline: "From blank space to first service.",
       byline: "Brand, menu, systems, hiring, training, go-live. Complete end-to-end implementation.",
       image: "/images/cornback.webp",
-      cta: "View Services"
+      cta: "View Services",
+	  link: "#services",
     },
+	
     {
       id: 4,
       headline: "We turn opinions into options",
       byline: "Consistent, rigorous thinking. No noise. Just clarity and partnership.",
       image: "/images/whiteback.webp",
-      cta: "Our Philosophy"
+      cta: "Our Philosophy",
+	  link: "#philosophy",
     },
 	
 	{
@@ -69,8 +76,9 @@ const App = () => {
       headline: "We listen.",
       byline: "We reduce. We decide - together.",
       image: "/images/heroback.webp",
-      cta: "Our Philosophy"
-    }
+      cta: "Know more about us",
+	  link: "#team",
+    },
 	
   ];
 
@@ -89,14 +97,14 @@ const App = () => {
   { id: 1, name: "Vantara Niwas", location: "Jamnagar", year: "2023", logo: "vantaralogo.webp" },
   { id: 2, name: "Little Food", location: "Mumbai", year: "2022", logo: "littlefoodlogo.webp" },
   { id: 3, name: "Sarabi", location: "Goa", year: "2025", logo: "saarbai.webp" },
-  { id: 4, name: "Basque", location: "Mumbai", year: "2021", logo: "basque.webp" },
-  { id: 4, name: "Mirari", location: "Lonavala", year: "2026", logo: "mirarilogo.webp" },
-  { id: 4, name: "Zeki", location: "Mumbai", year: "2021", logo: "zekilogo.webp" },
-  { id: 4, name: "Indulge", location: "Mumbai", year: "2025", logo: "indulgelogo.webp" },
-  { id: 4, name: "Whatsapp", location: "Mumbai", year: "2021", logo: "whatsapplogo.webp" },
-  { id: 4, name: "Moonshine", location: "Mumbai", year: "2021", logo: "moonshine.webp" },
-  { id: 4, name: "Phat Fillings", location: "Mumbai", year: "2021", logo: "phatlogo.webp" },
-  { id: 4, name: "Doppler", location: "Jaipur", year: "2026", logo: "doppler.webp" },
+  { id: 5, name: "Basque", location: "Mumbai", year: "2021", logo: "basque.webp" },
+  { id: 6, name: "Mirari", location: "Lonavala", year: "2026", logo: "mirarilogo.webp" },
+  { id: 7, name: "Zeki", location: "Mumbai", year: "2021", logo: "zekilogo.webp" },
+  { id: 8, name: "Indulge", location: "Mumbai", year: "2025", logo: "indulgelogo.webp" },
+  { id: 9, name: "Whatsapp", location: "Mumbai", year: "2021", logo: "whatsapplogo.webp" },
+  { id: 10, name: "Moonshine", location: "Mumbai", year: "2021", logo: "moonshine.webp" },
+  { id: 11, name: "Phat Fillings", location: "Mumbai", year: "2021", logo: "phatlogo.webp" },
+  { id: 12, name: "Doppler", location: "Jaipur", year: "2026", logo: "doppler.webp" },
 ];
 
 
@@ -202,16 +210,27 @@ const frameworkStages = [
           {mobileMenuOpen ? <X size={24} /> : <div className="space-y-1.5"><div className="w-6 h-0.5 bg-current"></div><div className="w-4 h-0.5 bg-current ml-auto"></div></div>}
         </button>
 
-        {/* Mobile Menu Overlay */}
-        {mobileMenuOpen && (
-          <div className="fixed inset-0 bg-[#0A0A0A] z-40 flex flex-col items-center justify-center space-y-8 text-white">
-            {['Home', 'Services', 'Philosophy', 'Framework', 'Works', 'Team', 'Contact'].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMobileMenuOpen(false)} className="text-2xl uppercase tracking-widest font-bold">
-                {item}
-              </a>
-            ))}
-          </div>
-        )}
+{/* Mobile Menu Overlay */}
+<div
+  className={`fixed inset-0 bg-[#0A0A0A] z-40 flex flex-col items-center justify-center space-y-8 text-white transition-all duration-500 ${
+    mobileMenuOpen
+      ? "opacity-100 translate-y-0 pointer-events-auto"
+      : "opacity-0 -translate-y-10 pointer-events-none"
+  }`}
+>
+  {['Home', 'Services', 'Philosophy', 'Framework', 'Works', 'Team', 'Contact'].map((item) => (
+    <a
+      key={item}
+      href={`#${item.toLowerCase()}`}
+      onClick={() => setMobileMenuOpen(false)}
+      className="text-2xl uppercase tracking-widest font-bold hover:text-[#A54040] transition-colors"
+    >
+      {item}
+    </a>
+  ))}
+</div>
+
+        
       </nav>
 
       {/* --- 2. HERO SLIDESHOW --- */}
@@ -247,9 +266,10 @@ const frameworkStages = [
                 {slide.byline}
               </p>
               
-              <button className="w-fit bg-[#A54040] text-white px-8 py-4 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-red-800 transition-colors animate-fade-in flex items-center gap-4">
-                {slide.cta} <ArrowRight size={16} />
-              </button>
+  <a href={slide.link} className="w-fit bg-[#A54040] text-white px-8 py-4 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-black transition-colors animate-fade-in flex items-center gap-4">
+  {slide.cta} <ArrowRight size={16} />
+</a>
+
             </div>
           </div>
         ))}
@@ -660,9 +680,9 @@ const frameworkStages = [
         .animate-slide-up-delay-2 { animation: slide-up 0.8s ease-out 0.4s forwards; opacity: 0; }
         .animate-fade-in { animation: fade-in 1s ease-out 0.6s forwards; opacity: 0; }
         .animate-slow-zoom { animation: slow-zoom 20s linear infinite alternate; }
-        .animate-marquee { animation: marquee 30s linear infinite; }
-        .animate-spin-slow { animation: spin 40s linear infinite; }
-        .animate-reverse-spin { animation: reverse-spin 40s linear infinite; }
+        .animate-marquee { animation: marquee 18s linear infinite; }
+        .animate-spin-slow { animation: spin 22s linear infinite; }
+        .animate-reverse-spin { animation: reverse-spin 22s linear infinite; }
         .hover\\:pause-spin:hover { animation-play-state: paused; }
         .hover\\:pause-spin:hover .animate-reverse-spin { animation-play-state: paused; }
         
