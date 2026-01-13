@@ -135,7 +135,7 @@ const frameworkStages = [
   {
     step: "04",
     title: "Human Systems",
-    desc: "Leadership structures and assembling the right people for success.",
+    desc: "Leadership structures and assembling the key operational team for success.",
     image: "/images//vantapragroup.jpg"
   },
   {
@@ -179,7 +179,7 @@ const frameworkStages = [
            <img 
   src="/images/mettlenobacklogo.png" 
   className={`h-10 md:h-12 ${isScrolled ? 'brightness-0' : 'brightness-200'}`} 
-/>
+           />
 
  <div className="flex flex-col leading-none">
   <span
@@ -428,7 +428,7 @@ const frameworkStages = [
         <div className="max-w-4xl mx-auto text-center">
           <span className="text-[#A54040] text-[10px] uppercase tracking-[0.4em] font-bold block mb-8">The Premise</span>
           <h3 className="text-3xl md:text-5xl font-serif italic text-[#2A3439] mb-12 leading-tight">
-            "Passion fills the dining room.<br/>Engineering fills the bank."
+            "Passion fills the dining room.<br/>Precision fills the bank."
           </h3>
           <div className="grid md:grid-cols-2 gap-12 text-left">
             <div>
