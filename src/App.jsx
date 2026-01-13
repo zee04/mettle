@@ -118,31 +118,31 @@ const frameworkStages = [
     step: "01",
     title: "Validation",
     desc: "Pressure-testing concepts against capital constraints.",
-    image: "/images//pepncil.webp"
+    
   },
   {
     step: "02",
     title: "Systemic Design",
     desc: "Planning spatial flow and BOH efficiency.",
-    image: "/images//phapse 1.webp"
+   
   },
   {
     step: "03",
     title: "Menu Architecture",
     desc: "Yield management and supply chain logic.",
-    image: "/images//menpu.jpg"
+    
   },
   {
     step: "04",
     title: "Human Systems",
     desc: "Leadership structures and assembling the key operational team for success.",
-    image: "/images//vantapragroup.jpg"
+   
   },
   {
     step: "05",
     title: "Launch & Stabilize",
     desc: "Standardization & on-ground training. Ensuring flawless execution from day one",
-    image: "/images//vidiptaction.jpg"
+  
   }
 ]
 
@@ -162,10 +162,10 @@ const frameworkStages = [
       
       {/* --- FLOATING ACTION BUTTONS --- */}
       <div className="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
-        <a href="https://wa.me/91816950115" className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <a href="https://wa.me/918169501153" className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
           <MessageCircle size={24} />
         </a>
-        <a href="tel:+91816950115" className="w-14 h-14 rounded-full bg-[#A54040] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <a href="tel:+918169501153" className="w-14 h-14 rounded-full bg-[#A54040] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
           <Phone size={24} />
         </a>
       </div>
@@ -229,7 +229,7 @@ const frameworkStages = [
 
 {/* Mobile Menu Overlay */}
 <div
-  className={`fixed inset-0 bg-[#0A0A0A] z-40 flex flex-col items-center justify-center space-y-8 text-white transition-all duration-500 ${
+  className={`fixed inset-0 bg-[#0A0A0A]/95 backdrop-blur-xl z-[999]flex flex-col items-center justify-center space-y-8 text-white transition-all duration-500 ${
     mobileMenuOpen
       ? "opacity-100 translate-y-0 pointer-events-auto"
       : "opacity-0 -translate-y-10 pointer-events-none"
@@ -355,7 +355,7 @@ const frameworkStages = [
             </h2>
         </div>
 
-        <div className="relative w-[340px] h-[340px] md:w-[600px] md:h-[600px] z-10 flex items-center justify-center perspective-1000">
+        <div className="relative w-[280px] h-[280px] md:w-[600px] md:h-[600px] z-10 flex items-center justify-center perspective-1000">
             {/* Orbit Rings */}
             <div className="absolute w-[80%] h-[80%] border border-neutral-300/60 rounded-full animate-spin-slow pointer-events-none"></div>
             <div className="absolute w-[120%] h-[120%] border border-neutral-300/30 rounded-full pointer-events-none"></div>
@@ -370,7 +370,7 @@ const frameworkStages = [
             <div className="absolute inset-0 animate-spin-slow hover:pause-spin">
               {services.map((service, index) => {
                  const angle = (index / services.length) * 2 * Math.PI;
-                 const radiusPercent = 40; // Percentage of container width
+                 const radiusPercent = window.innerWidth < 768 ? 28 : 40;
                  const left = `calc(50% + ${Math.cos(angle) * radiusPercent}%)`;
                  const top = `calc(50% + ${Math.sin(angle) * radiusPercent}%)`;
                  const isFlipped = flippedService === index;
@@ -399,14 +399,14 @@ const frameworkStages = [
                               </div>
                               {/* The actual text description popout */}
                               <div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
-<div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
-  <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
-    {service.title}
-  </h4>
-  <p className="text-[11px] leading-tight text-neutral-500">
-    {service.desc}
-  </p>
-</div>
+                                  <div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
+                                    <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
+                                        {service.title}
+                                    </h4>
+                                          <p className="text-[11px] leading-tight text-neutral-500">
+                                         {service.desc}
+                                          </p>
+                                  </div>
 
 
                                   <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">{service.title}</h4>
@@ -584,12 +584,12 @@ const frameworkStages = [
 </a>
 
                     <div className="flex gap-4 w-full md:w-auto">
-                    <a href="tel:+919769311850"
+                    <a href="tel:+918169501153"
                    className="flex-1 bg-white border border-neutral-200 px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-neutral-50 flex items-center justify-center gap-3">
                   <Phone size={14} className="text-[#A54040]" /> Call Now
                          </a>
 
-                       <a href="https://wa.me/9769311850" target="_blank" rel="noopener noreferrer"
+                       <a href="https://wa.me/8169501153" target="_blank" rel="noopener noreferrer"
                     className="flex-1 bg-white border border-neutral-200 px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-neutral-50 flex items-center justify-center gap-3">
                        <MessageCircle size={14} className="text-[#25D366]" /> WhatsApp
                            </a>
@@ -607,57 +607,58 @@ const frameworkStages = [
 >
 
                     <div className="grid md:grid-cols-2 gap-8">
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Name</label>
-                          <input type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Full Name" />
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">City</label>
-                          <input type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Project Location" />
-                       </div>
-                    </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Name</label>
+    <input name="name" type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Full Name" />
+  </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">City</label>
+    <input name="city" type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Project Location" />
+  </div>
+</div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Email</label>
-                          <input type="email" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Email Address" />
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Phone</label>
-                          <input type="tel" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="+91" />
-                       </div>
-                    </div>
+<div className="grid md:grid-cols-2 gap-8">
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Email</label>
+    <input name="email" type="email" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Email Address" />
+  </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Phone</label>
+    <input name="phone" type="tel" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="+91" />
+  </div>
+</div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Inquiry Type</label>
-                          <select className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
-                             <option>Restaurant / Café Launch</option>
-                             <option>Hospitality Consulting</option>
-                             <option>Events & Private Dining</option>
-                             <option>Training & SOPs</option>
-                             <option>Brand Development</option>
-                          </select>
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Stage</label>
-                          <select className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
-                             <option>Concept / Idea</option>
-                             <option>Funded / Location Locked</option>
-                             <option>Under Construction</option>
-                             <option>Operational (Turnaround)</option>
-                          </select>
-                       </div>
-                    </div>
+<div className="grid md:grid-cols-2 gap-8">
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Inquiry Type</label>
+    <select name="inquiry" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
+      <option>Restaurant / Café Launch</option>
+      <option>Hospitality Consulting</option>
+      <option>Events & Private Dining</option>
+      <option>Training & SOPs</option>
+      <option>Brand Development</option>
+    </select>
+  </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Stage</label>
+    <select name="stage" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
+      <option>Concept / Idea</option>
+      <option>Funded / Location Locked</option>
+      <option>Under Construction</option>
+      <option>Operational (Turnaround)</option>
+    </select>
+  </div>
+</div>
 
-                    <div className="space-y-2">
-                       <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Message</label>
-                       <textarea className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors min-h-[100px]" placeholder="Tell us about your vision..."></textarea>
-                    </div>
+<div className="space-y-2">
+  <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Message</label>
+  <textarea name="message" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors min-h-[100px]" placeholder="Tell us about your vision..."></textarea>
+</div>
 
-                    <button className="w-full bg-[#A54040] text-white py-6 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-black transition-colors">
-                       Submit Inquiry
-                    </button>
+<button className="w-full bg-[#A54040] text-white py-6 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-black transition-colors">
+  Submit Inquiry
+</button>
+
                  </form>
               </div>
            </div>
