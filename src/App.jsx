@@ -229,7 +229,7 @@ const frameworkStages = [
 
 {/* Mobile Menu Overlay */}
 <div
-  className={`fixed inset-0 bg-[#0A0A0A]/95 backdrop-blur-xl z-[999]flex flex-col items-center justify-center space-y-8 text-white transition-all duration-500 ${
+  className={`fixed inset-0 bg-[#0A0A0A]/95 backdrop-blur-xl z-[999] flex flex-col items-center justify-center space-y-8 text-white transition-all duration-500 ${
     mobileMenuOpen
       ? "opacity-100 translate-y-0 pointer-events-auto"
       : "opacity-0 -translate-y-10 pointer-events-none"
@@ -355,7 +355,7 @@ const frameworkStages = [
             </h2>
         </div>
 
-        <div className="relative w-[280px] h-[280px] md:w-[600px] md:h-[600px] z-10 flex items-center justify-center perspective-1000">
+        <divclassName="absolute w-16 h-16 md:w-20 md:h-20 -ml-8 -mt-8 md:-ml-10 md:-mt-10">
             {/* Orbit Rings */}
             <div className="absolute w-[80%] h-[80%] border border-neutral-300/60 rounded-full animate-spin-slow pointer-events-none"></div>
             <div className="absolute w-[120%] h-[120%] border border-neutral-300/30 rounded-full pointer-events-none"></div>
@@ -370,7 +370,8 @@ const frameworkStages = [
             <div className="absolute inset-0 animate-spin-slow hover:pause-spin">
               {services.map((service, index) => {
                  const angle = (index / services.length) * 2 * Math.PI;
-                 const radiusPercent = window.innerWidth < 768 ? 28 : 40;
+                 const radiusPercent = 40;
+
                  const left = `calc(50% + ${Math.cos(angle) * radiusPercent}%)`;
                  const top = `calc(50% + ${Math.sin(angle) * radiusPercent}%)`;
                  const isFlipped = flippedService === index;
@@ -398,8 +399,28 @@ const frameworkStages = [
                                   <ArrowRight className="text-white w-6 h-6" />
                               </div>
                               {/* The actual text description popout */}
-                              <div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
-                                  <div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
+                              {/* Desktop tooltip */}
+<div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50">
+  <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
+    {service.title}
+  </h4>
+  <p className="text-[10px] leading-tight text-neutral-500">
+    {service.desc}
+  </p>
+</div>
+
+{/* Mobile bottom sheet */}
+{isFlipped && (
+  <div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
+    <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
+      {service.title}
+    </h4>
+    <p className="text-[11px] leading-tight text-neutral-500">
+      {service.desc}
+    </p>
+  </div>
+)}
+
                                     <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
                                         {service.title}
                                     </h4>
