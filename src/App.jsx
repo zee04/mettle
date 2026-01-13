@@ -355,7 +355,7 @@ const frameworkStages = [
             </h2>
         </div>
 
-        <divclassName="absolute w-16 h-16 md:w-20 md:h-20 -ml-8 -mt-8 md:-ml-10 md:-mt-10">
+        <div className="relative w-[280px] h-[280px] md:w-[600px] md:h-[600px] z-10 flex items-center justify-center perspective-1000">
             {/* Orbit Rings */}
             <div className="absolute w-[80%] h-[80%] border border-neutral-300/60 rounded-full animate-spin-slow pointer-events-none"></div>
             <div className="absolute w-[120%] h-[120%] border border-neutral-300/30 rounded-full pointer-events-none"></div>
@@ -400,42 +400,29 @@ const frameworkStages = [
                               </div>
                               {/* The actual text description popout */}
                               {/* Desktop tooltip */}
-<div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50">
-  <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
-    {service.title}
-  </h4>
-  <p className="text-[10px] leading-tight text-neutral-500">
-    {service.desc}
-  </p>
-</div>
+                               <div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50">
+                              <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
+                                     {service.title}
+                                        </h4>
+                                    <p className="text-[10px] leading-tight text-neutral-500">
+                                    {service.desc}
+                                    </p>
+                            </div>
 
-{/* Mobile bottom sheet */}
-{isFlipped && (
-  <div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
-    <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
-      {service.title}
-    </h4>
-    <p className="text-[11px] leading-tight text-neutral-500">
-      {service.desc}
-    </p>
-  </div>
-)}
-
-                                    <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
-                                        {service.title}
-                                    </h4>
-                                          <p className="text-[11px] leading-tight text-neutral-500">
-                                         {service.desc}
-                                          </p>
+                     {/* Mobile bottom sheet */}
+                       {isFlipped && (
+                   <div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
+                    <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
+                            {service.title}
+                     </h4>
+                     <p className="text-[11px] leading-tight text-neutral-500">
+                                {service.desc}
+                     </p>
+                     </div>
+                                    )}
                                   </div>
-
-
-                                  <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">{service.title}</h4>
-                                  <p className="text-[10px] leading-tight text-neutral-500">{service.desc}</p>
                               </div>
-                          </div>
-                      </div>
-                   </div>
+                          </div>                     
                  );
               })}
             </div>
@@ -594,7 +581,7 @@ const frameworkStages = [
                  </div>
 
                  <div className="flex flex-col gap-6 items-start">
-<a
+  <a
   href="https://calendar.app.google/TSLqxFvhp5NHXkJ8A"
   target="_blank"
   rel="noopener noreferrer"
@@ -755,6 +742,7 @@ const frameworkStages = [
         .rotate-y-180 { transform: rotateY(180deg); }
       `}} />
     </div>
+ 
   );
 };
 
