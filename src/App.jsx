@@ -31,14 +31,19 @@ const App = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  useEffect(() => {
+  document.body.style.overflow = mobileMenuOpen ? "hidden" : "auto";
+}, [mobileMenuOpen]);
+
 
   // --- DATA SECTIONS ---
 
   const heroSlides = [
     {
       id: 1,
-      headline: "Systems Before Service.",
-      byline: "Based in Mumbai, Mettle designs the operational architecture that allows boutique concepts to scale and generate predictable returns nationwide and globally.",
+      headline: "METHOD TO THE MADNESS.",
+      byline: "Make the routine automatic so the chaos feels manageable.",
       image: "/images/sealinknight.webp",
       cta: "Explore Method",
 	  link: "#framework",
@@ -46,7 +51,7 @@ const App = () => {
 	
     {
       id: 2,
-      headline: "₹12Cr → ₹34Cr Revenue.",
+      headline: "Launched 12 Projects in 18 Months",
       byline: "Proven velocity through systemic design and operational audits.",
       image: "/images/stair.webp",
       cta: "Our Projects",
@@ -94,16 +99,16 @@ const App = () => {
   ];
 
   const projects = [
-  { id: 1, name: "Vantara Niwas", location: "Jamnagar", year: "2023", logo: "vantaralogo.webp" },
-  { id: 2, name: "Little Food", location: "Mumbai", year: "2022", logo: "littlefoodlogo.webp" },
+  { id: 1, name: "Vantara Niwas", location: "Jamnagar", year: "2025/26", logo: "vantaralogo.webp" },
+  { id: 2, name: "Little Food", location: "Mumbai", year: "2024", logo: "littlefoodlogo.webp" },
   { id: 3, name: "Sarabi", location: "Goa", year: "2025", logo: "saarbai.webp" },
-  { id: 5, name: "Basque", location: "Mumbai", year: "2021", logo: "basque.webp" },
+  { id: 5, name: "Basque", location: "Mumbai", year: "2025", logo: "basque.webp" },
   { id: 6, name: "Mirari", location: "Lonavala", year: "2026", logo: "mirarilogo.webp" },
-  { id: 7, name: "Zeki", location: "Mumbai", year: "2021", logo: "zekilogo.webp" },
+  { id: 7, name: "Zeki", location: "Mumbai", year: "2025", logo: "zekilogo.webp" },
   { id: 8, name: "Indulge", location: "Mumbai", year: "2025", logo: "indulgelogo.webp" },
-  { id: 9, name: "Whatsapp", location: "Mumbai", year: "2021", logo: "whatsapplogo.webp" },
-  { id: 10, name: "Moonshine", location: "Mumbai", year: "2021", logo: "moonshine.webp" },
-  { id: 11, name: "Phat Fillings", location: "Mumbai", year: "2021", logo: "phatlogo.webp" },
+  { id: 9, name: "Whatsapp", location: "Mumbai", year: "2024", logo: "whatsapplogo.webp" },
+  { id: 10, name: "Moonshine", location: "Mumbai", year: "2024", logo: "moonshine.webp" },
+  { id: 11, name: "Phat Fillings", location: "Mumbai", year: "2024", logo: "phatlogo.webp" },
   { id: 12, name: "Doppler", location: "Jaipur", year: "2026", logo: "doppler.webp" },
 ];
 
@@ -166,7 +171,7 @@ const frameworkStages = [
       </div>
 
       {/* --- 1. TOP NAVIGATION --- */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-700 px-6 md:px-12 py-6 flex justify-between items-center ${isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-transparent text-white'}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-700 px-6 md:px-12 py-6 flex justify-between items-center ${isScrolled ? 'bg-[#FAF9F6]/95 backdrop-blur-md border-b border-black/10 shadow-sm text-black' : 'bg-black/70 backdrop-blur-md text-white'}`}>
         
         {/* Logo */}
         <div className="flex items-center gap-4 z-50">
@@ -207,7 +212,19 @@ const frameworkStages = [
           className={`lg:hidden z-50 p-2 ${isScrolled ? 'text-black' : 'text-white'}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <div className="space-y-1.5"><div className="w-6 h-0.5 bg-current"></div><div className="w-4 h-0.5 bg-current ml-auto"></div></div>}
+          <div className="w-8 h-8 relative">
+  <span
+    className={`absolute top-2 left-0 w-full h-[2px] bg-current transition-all duration-500 ${
+      mobileMenuOpen ? "rotate-45 top-4" : ""
+    }`}
+  />
+  <span
+    className={`absolute top-5 left-0 w-full h-[2px] bg-current transition-all duration-500 ${
+      mobileMenuOpen ? "-rotate-45 top-4" : ""
+    }`}
+  />
+</div>
+
         </button>
 
 {/* Mobile Menu Overlay */}
@@ -381,7 +398,16 @@ const frameworkStages = [
                                   <ArrowRight className="text-white w-6 h-6" />
                               </div>
                               {/* The actual text description popout */}
-                              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
+                              <div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
+<div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
+  <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
+    {service.title}
+  </h4>
+  <p className="text-[11px] leading-tight text-neutral-500">
+    {service.desc}
+  </p>
+</div>
+
 
                                   <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">{service.title}</h4>
                                   <p className="text-[10px] leading-tight text-neutral-500">{service.desc}</p>
@@ -449,6 +475,7 @@ const frameworkStages = [
                 
                  
                  <div className="flex flex-col md:flex-row gap-6 pt-6 border-t border-black/5">
+
                     <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-neutral-300 overflow-hidden shadow-xl mx-auto md:mx-0">
                        <img src="/images/vidit1.png" alt="Founder" className="w-full h-full object-cover" />
                     </div>
@@ -476,7 +503,7 @@ const frameworkStages = [
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
            <span className="text-[#A54040] text-[10px] uppercase tracking-[0.4em] font-bold block mb-12">The Method</span>
-           <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tighter mb-24">Lifecycle <br/> Architecture.</h2>
+           <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tighter mb-24">Operational<br/> Cadence.</h2>
            
            <div className="space-y-0">
 {frameworkStages.map((stage, i) => (
