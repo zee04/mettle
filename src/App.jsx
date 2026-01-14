@@ -162,10 +162,10 @@ const frameworkStages = [
       
       {/* --- FLOATING ACTION BUTTONS --- */}
       <div className="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
-        <a href="https://wa.me/91816950115" className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <a href="https://wa.me/918169501153" className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
           <MessageCircle size={24} />
         </a>
-        <a href="tel:+91816950115" className="w-14 h-14 rounded-full bg-[#A54040] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <a href="tel:+918169501153" className="w-14 h-14 rounded-full bg-[#A54040] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
           <Phone size={24} />
         </a>
       </div>
@@ -550,7 +550,7 @@ const frameworkStages = [
         </div>
       </section>
 
-      {/* --- 9. CONTACT & CTA (With BG Image) --- */}
+       {/* --- 9. CONTACT & CTA (With BG Image) --- */}
       <section id="contact" className="py-32 relative bg-[#FAF9F6] overflow-hidden">
         {/* Background Image */}
          <div className="absolute inset-0 z-0 opacity-5">
@@ -584,12 +584,12 @@ const frameworkStages = [
 </a>
 
                     <div className="flex gap-4 w-full md:w-auto">
-                    <a href="tel:+919769311850"
+                    <a href="tel:+918169501153"
                    className="flex-1 bg-white border border-neutral-200 px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-neutral-50 flex items-center justify-center gap-3">
                   <Phone size={14} className="text-[#A54040]" /> Call Now
                          </a>
 
-                       <a href="https://wa.me/9769311850" target="_blank" rel="noopener noreferrer"
+                       <a href="https://wa.me/8169501153" target="_blank" rel="noopener noreferrer"
                     className="flex-1 bg-white border border-neutral-200 px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-neutral-50 flex items-center justify-center gap-3">
                        <MessageCircle size={14} className="text-[#25D366]" /> WhatsApp
                            </a>
@@ -607,57 +607,57 @@ const frameworkStages = [
 >
 
                     <div className="grid md:grid-cols-2 gap-8">
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Name</label>
-                          <input type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Full Name" />
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">City</label>
-                          <input type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Project Location" />
-                       </div>
-                    </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Name</label>
+    <input name="name" type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Full Name" />
+  </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">City</label>
+    <input name="city" type="text" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Project Location" />
+  </div>
+</div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Email</label>
-                          <input type="email" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Email Address" />
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Phone</label>
-                          <input type="tel" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="+91" />
-                       </div>
-                    </div>
+<div className="grid md:grid-cols-2 gap-8">
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Email</label>
+    <input name="email" type="email" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="Email Address" />
+  </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Phone</label>
+    <input name="phone" type="tel" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors" placeholder="+91" />
+  </div>
+</div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Inquiry Type</label>
-                          <select className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
-                             <option>Restaurant / Café Launch</option>
-                             <option>Hospitality Consulting</option>
-                             <option>Events & Private Dining</option>
-                             <option>Training & SOPs</option>
-                             <option>Brand Development</option>
-                          </select>
-                       </div>
-                       <div className="space-y-2">
-                          <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Stage</label>
-                          <select className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
-                             <option>Concept / Idea</option>
-                             <option>Funded / Location Locked</option>
-                             <option>Under Construction</option>
-                             <option>Operational (Turnaround)</option>
-                          </select>
-                       </div>
-                    </div>
+<div className="grid md:grid-cols-2 gap-8">
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Inquiry Type</label>
+    <select name="inquiry" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
+      <option>Restaurant / Café Launch</option>
+      <option>Hospitality Consulting</option>
+      <option>Events & Private Dining</option>
+      <option>Training & SOPs</option>
+      <option>Brand Development</option>
+    </select>
+  </div>
+  <div className="space-y-2">
+    <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Stage</label>
+    <select name="stage" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors text-sm font-bold appearance-none">
+      <option>Concept / Idea</option>
+      <option>Funded / Location Locked</option>
+      <option>Under Construction</option>
+      <option>Operational (Turnaround)</option>
+    </select>
+  </div>
+</div>
 
-                    <div className="space-y-2">
-                       <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Message</label>
-                       <textarea className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors min-h-[100px]" placeholder="Tell us about your vision..."></textarea>
-                    </div>
+<div className="space-y-2">
+  <label className="text-[9px] uppercase tracking-widest font-black text-neutral-400">Message</label>
+  <textarea name="message" className="w-full border-b border-neutral-200 py-3 focus:outline-none focus:border-[#A54040] bg-transparent transition-colors min-h-[100px]" placeholder="Tell us about your vision..."></textarea>
+</div>
 
-                    <button className="w-full bg-[#A54040] text-white py-6 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-black transition-colors">
-                       Submit Inquiry
-                    </button>
+<button className="w-full bg-[#A54040] text-white py-6 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-black transition-colors">
+  Submit Inquiry
+</button>
                  </form>
               </div>
            </div>
