@@ -118,31 +118,31 @@ const frameworkStages = [
     step: "01",
     title: "Validation",
     desc: "Pressure-testing concepts against capital constraints.",
-    image: "/images//pepncil.webp"
+   
   },
   {
     step: "02",
     title: "Systemic Design",
     desc: "Planning spatial flow and BOH efficiency.",
-    image: "/images//phapse 1.webp"
+  
   },
   {
     step: "03",
     title: "Menu Architecture",
     desc: "Yield management and supply chain logic.",
-    image: "/images//menpu.jpg"
+   
   },
   {
     step: "04",
     title: "Human Systems",
     desc: "Leadership structures and assembling the key operational team for success.",
-    image: "/images//vantapragroup.jpg"
+    
   },
   {
     step: "05",
     title: "Launch & Stabilize",
     desc: "Standardization & on-ground training. Ensuring flawless execution from day one",
-    image: "/images//vidiptaction.jpg"
+    
   }
 ]
 
@@ -229,7 +229,7 @@ const frameworkStages = [
 
 {/* Mobile Menu Overlay */}
 <div
-  className={`fixed inset-0 bg-[#0A0A0A] z-40 flex flex-col items-center justify-center space-y-8 text-white transition-all duration-500 ${
+  className={`fixed inset-0 bg-black/95 backdrop-blur-sm z-40 flex flex-col items-center justify-center space-y-8 text-white transition-all duration-500 ${
     mobileMenuOpen
       ? "opacity-100 translate-y-0 pointer-events-auto"
       : "opacity-0 -translate-y-10 pointer-events-none"
@@ -336,7 +336,8 @@ const frameworkStages = [
         </div>
       </div>
 
-      {/* --- 4. SERVICES (Solar System Loop) --- */}
+ {/* --- 4. SERVICES (Solar System Loop) --- */}
+ {/* --- 4. SERVICES (Solar System Loop) --- */}
       <section id="services" className="py-32 relative overflow-hidden flex flex-col items-center justify-center min-h-[90vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -398,16 +399,7 @@ const frameworkStages = [
                                   <ArrowRight className="text-white w-6 h-6" />
                               </div>
                               {/* The actual text description popout */}
-                              <div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
-<div className="md:hidden fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-white p-5 shadow-2xl rounded-xl text-center z-[200]">
-  <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">
-    {service.title}
-  </h4>
-  <p className="text-[11px] leading-tight text-neutral-500">
-    {service.desc}
-  </p>
-</div>
-
+                              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-white p-4 shadow-2xl rounded-lg text-center pointer-events-none z-50 animate-reverse-spin">
 
                                   <h4 className="font-bold text-xs uppercase mb-1 text-[#A54040]">{service.title}</h4>
                                   <p className="text-[10px] leading-tight text-neutral-500">{service.desc}</p>
@@ -422,6 +414,7 @@ const frameworkStages = [
         
         <p className="text-[10px] uppercase tracking-widest text-neutral-400 mt-12 animate-pulse">Click icons to explore services</p>
       </section>
+
 
       {/* --- 5. PHILOSOPHY / PREMISE --- */}
       <section id="philosophy" className="py-32 px-6 md:px-12 bg-white">
